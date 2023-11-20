@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 07 2023 г., 13:49
+-- Время создания: Ноя 20 2023 г., 13:00
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -43,7 +43,9 @@ INSERT INTO `phone` (`id`, `name`, `info`, `img`) VALUES
 (2, 'iphone10', 'ядер - 6x(2.65 ГГц), 4 ГБ, 1 SIM, IPS, 1792x828, камера 12+12 Мп, NFC, 4G, GPS, 3110 мА*ч', '4.jpg'),
 (3, 'pocoX12', 'ядер - 6x(2.65 ГГц), 4 ГБ, 1 SIM, IPS, 1792x828, камера 12+12 Мп, NFC, 4G, GPS, 3110 мА*ч', '3.jpg'),
 (4, 'samsung', 'ядер - 6x(2.65 ГГц), 4 ГБ, 1 SIM, IPS, 1792x828, камера 12+12 Мп, NFC, 4G, GPS, 3110 мА*ч', '2.jpg'),
-(5, 'huaway', 'ядер - 6x(2.65 ГГц), 4 ГБ, 1 SIM, IPS, 1792x828, камера 12+12 Мп, NFC, 4G, GPS, 3110 м', '1.jpg');
+(5, 'huaway', 'ядер - 6x(2.65 ГГц), 4 ГБ, 1 SIM, IPS, 1792x828, камера 12+12 Мп, NFC, 4G, GPS, 3110 м', '1.jpg'),
+(6, 'iphone112', 'ядер - 6x(2.65 ГГц), 4 ГБ, 1 SIM, IPS, 1792x828, камера 12+12 Мп, NFC, 4G, GPS, 3110 м', '4.jpg'),
+(7, 'iphone1000', '    width: 100%;\r\n    margin: 0 auto;\r\n', '5.jpg');
 
 -- --------------------------------------------------------
 
@@ -102,7 +104,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `password`, `phone`) VALUES
 (1, 'артур', 'артур', '123', 123),
-(2, 'влад', 'влад', '222', 222);
+(2, 'влад', 'влад', '222', 222),
+(3, '222', '222', '333', 333),
+(4, 'admin', 'admin', 'admin', 1234);
 
 --
 -- Индексы сохранённых таблиц
@@ -134,7 +138,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `phone`
 --
 ALTER TABLE `phone`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `Reviews`
@@ -146,7 +150,7 @@ ALTER TABLE `Reviews`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

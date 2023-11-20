@@ -13,7 +13,7 @@ include("bd_connect/auth_session.php");
 
 <?php 
    
-                $sql2 = 'SELECT * from phone limit 5';
+                $sql2 = 'SELECT * from phone ';
                 $result = $con->query($sql2);
         
                 while ($row = $result->fetch_assoc()) {
@@ -32,6 +32,9 @@ include("bd_connect/auth_session.php");
 
 
 
+<!-- https://intop24.ru/article_15_lesson_5.php -->
+
+<!-- https://intop24.ru/article_15_lesson_6.php -->
 
 </div>
 

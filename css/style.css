@@ -72,9 +72,15 @@ height: auto;
 }
 
 .popular-row{
+    width: 100%;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-start;
 }
+
 
 .popular-card{
     margin: 50px;
