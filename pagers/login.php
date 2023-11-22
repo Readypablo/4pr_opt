@@ -32,7 +32,10 @@ include("bd_connect/db.php")
                 $_SESSION['user_mobile']=$main_user['phone'];
                 $_SESSION['user_addres']=$main_user['addres'];
                 $_SESSION['first_name'] = $mobile;
-                 header("Location: dashboard.php");
+        
+                    header("Location: dashboard.php");
+                
+                 
         }
 // если данные не совпали
         }else{
