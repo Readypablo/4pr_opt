@@ -84,9 +84,10 @@ height: auto;
 
 .popular-card{
     margin: 50px;
+
     padding: 10px;
-    width: 250px;
-    height: 350px;
+    width: 260px;
+    height:auto;
     text-align: left;
     box-shadow:0px 0px 15px 1px black;
 }
@@ -134,13 +135,14 @@ height: auto;
 }
 
 .review-item{
-    width: 1000px;
+    width: 1200px;
     font-size: 20px;
-    height: 50px;
+    height: 55px;
     box-shadow:0px 0px 15px 1px black;
     margin: 25px;
     text-align: left;
-    padding: 5px 15px;
+    display: flex;
+    padding: 0 0 0 10px;
 }
 
 .prem{
@@ -244,4 +246,19 @@ box-shadow: 0px 2px 15px 2px rgb(0, 0, 0);
 .ss{
     color: grey;
     font-size: 12px;
+}
+
+.btn-del{
+    border: none;
+    background: brown;
+    width: 100px;
+    font-size: 17px;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+.btn-del:hover{
+    background: rgb(252, 67, 67);
 }

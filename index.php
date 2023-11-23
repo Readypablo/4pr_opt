@@ -15,7 +15,7 @@
         <div class="elem-menu"><a href="pagers/catalog.php" class="link-header">Каталог</a></div>
         <div class="elem-menu"><a href="pagers/otzivi.php" class="link-header">Ваши отзывы</a></div>
         <div class="elem-menu"><a href="pagers/prem.php" class="link-header">Преимущества</a></div>
-        <div class="elem-menu"><a href="pagers/login.php" class="link-header">Личный кабинет</a></div>
+        <div class="elem-menu"><a href="pagers/dashboard.php" class="link-header">Личный кабинет</a></div>
     </div>
 
     <div class="slogan">
@@ -35,29 +35,23 @@
 <div class="zagolovok"> Популярные товары</div>
 
 <div class="popular-row">
+<?php 
+include("pagers/bd_connect/db.php");
+$sql2 = 'SELECT * from phone ';
+$result = $con->query($sql2);
 
+while ($row = $result->fetch_assoc()) {
+    $id= $row['id'];
+    echo '
     <div class="popular-card">
-        <img src="img/1.jpg" alt="">
-        <h2>poco X3</h2>
-        <p>ядер - 4x(1.3 ГГц), 1 ГБ, 2 SIM, IPS, 1280x720, камера 5 Мп, 3G, GPS, 2500 мА*ч</p>
-    </div>
+    <img src="../img/'.$row['img'].'" alt="">
+         <h2>'.$row['name'].'</h2>
+         <p>'.$row['info'].'</p>';
+        
+          echo ' </div>';
+}
 
-    <div class="popular-card">
-        <img src="img/1.jpg" alt="">
-        <h2>poco X3</h2>
-        <p>ядер - 4x(1.3 ГГц), 1 ГБ, 2 SIM, IPS, 1280x720, камера 5 Мп, 3G, GPS, 2500 мА*ч</p>
-    </div>
-    <div class="popular-card">
-        <img src="img/1.jpg" alt="">
-        <h2>poco X3</h2>
-        <p>ядер - 4x(1.3 ГГц), 1 ГБ, 2 SIM, IPS, 1280x720, камера 5 Мп, 3G, GPS, 2500 мА*ч</p>
-    </div>
-    <div class="popular-card">
-        <img src="img/1.jpg" alt="">
-        <h2>poco X3</h2>
-        <p>ядер - 4x(1.3 ГГц), 1 ГБ, 2 SIM, IPS, 1280x720, камера 5 Мп, 3G, GPS, 2500 мА*ч</p>
-    </div>
-
+?>
 </div>
  
 

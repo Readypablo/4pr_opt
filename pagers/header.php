@@ -16,7 +16,12 @@
         <div class="elem-menu"><a href="catalog.php" class="link-header">Каталог</a></div>
         <div class="elem-menu"><a href="otzivi.php" class="link-header">Ваши отзывы</a></div>
         <div class="elem-menu"><a href="prem.php" class="link-header">Преимущества</a></div>
-        <div class="elem-menu"><a href="login.php" class="link-header">Личный кабинет</a></div>
+        <div class="elem-menu"><a href="dashboard.php" class="link-header">Личный кабинет</a></div>
+
+        
+
+
+
     </div>
 
     <div class="slogan">
