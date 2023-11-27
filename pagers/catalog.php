@@ -29,6 +29,7 @@ include("bd_connect/auth_session.php");
                           mysqli_query($con , $query) or die ;
                           }
                         }
+                        
                           echo ' </div>';
                 }
 
@@ -48,9 +49,13 @@ include("bd_connect/auth_session.php");
                     <h3 class="name-card">Имя файла изображения</h3>
                     <input type="text" class="inp-chang" name="silk" required>
                     <p class="ss">пример: 1.jpg , 2.png (файлые которые есть у вас)</p>
-                    
+
+                    <h3 class="name-card">Цена товара</h3>
+                    <input type="text" class="inp-chang" name="cost" required>
+
                     <input type="submit" value="Добавить" class="btn-chang" name="send">
                     </form>
+                    
                     </div>';
 
                     if(isset($_POST['send'])) {
@@ -65,13 +70,14 @@ include("bd_connect/auth_session.php");
                         $silk = stripslashes($_REQUEST['silk']);
                         $silk = mysqli_real_escape_string($con, $silk);
 
-
+                        $cost = stripslashes($_REQUEST['cost']);
+                        $cost = mysqli_real_escape_string($con, $cost);
 
                         $allowedPattern = '/^\d+\.jpg$/';
                         if (preg_match($allowedPattern, $silk)){
                         
 
-                            $query = "INSERT into `phone` (name, info, img) VALUES ('$name', '$info', '$silk')";
+                            $query = "INSERT into `phone` (name, info, img,cost) VALUES ('$name', '$info', '$silk', '$cost')";
 
                             $ult = mysqli_query($con, $query);
     
